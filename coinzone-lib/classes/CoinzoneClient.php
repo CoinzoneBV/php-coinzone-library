@@ -156,10 +156,11 @@ class CoinzoneClient
     private function getResponse($request, $response)
     {
         $responseObj = new $this->response[get_class($request)];
-        foreach($response->response as $responseParam => $responseValue) {
+        foreach ($response->response as $responseParam => $responseValue) {
             $method = 'set' . ucfirst($responseParam);
             $responseObj->$method($responseValue);
         }
+
         return $responseObj;
     }
 
@@ -170,7 +171,7 @@ class CoinzoneClient
      */
     private function checkRequest($request)
     {
-        switch(get_class($request)) {
+        switch (get_class($request)) {
             case 'NewTransactionRequest':
                 if (!filter_var($request->getEmail(), FILTER_VALIDATE_EMAIL)) {
                     throw new CoinzoneException('Invalid Email');

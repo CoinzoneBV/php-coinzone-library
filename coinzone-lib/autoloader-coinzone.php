@@ -3,7 +3,8 @@
  * Autoload Coinzone Request Objects
  * @param $className
  */
-function autoloadRequest($className) {
+function autoloadRequest($className)
+{
     $filename = __DIR__ . '/request/' . $className . '.php';
     if (is_readable($filename)) {
         require_once($filename);
@@ -14,7 +15,8 @@ function autoloadRequest($className) {
  * Autoload Coinzone Response Objects
  * @param $className
  */
-function autoloadResponse($className) {
+function autoloadResponse($className)
+{
     $filename = __DIR__ . '/response/' . $className . '.php';
     if (is_readable($filename)) {
         require_once($filename);
@@ -25,7 +27,8 @@ function autoloadResponse($className) {
  * Autoload Coinzone Client
  * @param $className
  */
-function autoloadClasses($className) {
+function autoloadClasses($className)
+{
     $filename = __DIR__ . '/classes/' . $className . '.php';
     if (is_readable($filename)) {
         require_once($filename);
@@ -36,7 +39,8 @@ function autoloadClasses($className) {
  * Autoload Coinzone Client
  * @param $className
  */
-function autoloadException($className) {
+function autoloadException($className)
+{
     $filename = __DIR__ . '/exception/' . $className . '.php';
     if (is_readable($filename)) {
         require_once($filename);
