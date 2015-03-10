@@ -26,6 +26,11 @@ class NewTransactionRequest
     public $email;
 
     /**
+     * @var string
+     */
+    public $description;
+
+    /**
      * @var $string
      */
     public $redirectUrl;
@@ -97,6 +102,22 @@ class NewTransactionRequest
     public function setEmail($email)
     {
         $this->email = $email;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * @param string $description
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
     }
 
     /**

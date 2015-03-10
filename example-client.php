@@ -14,6 +14,7 @@ $newTransaction->setAmount('3.5');
 $newTransaction->setCurrency('USD');
 $newTransaction->setMerchantReference('YOUR_TRX_ID');
 $newTransaction->setEmail('customer@your-shop.com');
+$newTransaction->setDescription('Lorem ipsum dolor sit amet');
 $newTransaction->setRedirectUrl('http://your-shop.com/checkout/success');
 $newTransaction->setNotificationUrl('http://your-shop.com/callback_coinzone');
 
