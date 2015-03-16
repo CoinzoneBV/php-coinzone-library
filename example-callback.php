@@ -2,9 +2,10 @@
 /** require the coinzone library */
 require_once 'coinzone-lib/autoloader-coinzone.php';
 
-$headers = your_get_headers(); // `getallheaders()` can be used
-$url = get_current_url(); // the current absolute URL
 $content = file_get_contents("php://input"); // Coinzone IPN is sent as json encoded
+
+$headers = CoinzoneUtils::getHeaders(); // or use your preffered method of fetching headers
+$url = CoinzoneUtils::getCurrentUrl(); // or your method of obtaining the current url
 
 /** init the callback class */
 $coinzoneCallback = new CoinzoneCallback('YOUR_CLIENT_CODE', 'YOUR_API_KEY');
